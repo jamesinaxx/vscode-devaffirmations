@@ -1,0 +1,63 @@
+{
+	"name": "vscode-devaffirmations",
+	"displayName": "Developer Affirmations",
+	"version": "1.1.5",
+	"description": "Reminds you of what an amazing developer you are through notifications that run on startup and through a command",
+	"categories": [
+		"Other",
+		"Snippets",
+		"Education"
+	],
+	"homepage": "https://github.com/jewlexx/vscode-devaffirmations#Features",
+	"bugs": {
+		"url": "https://github.com/microsoft/vscode-wordcount/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jewlexx/vscode-devaffirmations"
+	},
+	"license": "MIT",
+	"publisher": "jewlexx",
+	"main": "./out/extension.js",
+	"scripts": {
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"package": "vsce package",
+		"publish": "vsce package && vsce publish",
+		"pretest": "yarn compile && yarn lint",
+		"test": "node ./out/test/runTest.js",
+		"vscode:prepublish": "yarn compile",
+		"watch": "tsc -watch -p ./"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "vscode-devaffirmations.affirm",
+				"title": "I am a good developer"
+			}
+		]
+	},
+	"activationEvents": [
+		"onCommand:vscode-devaffirmations.affirm",
+		"onStartupFinished"
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.55.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"eslint": "^7.25.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"prettier": "^2.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	},
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"icon": "assets/icon.png"
+}
