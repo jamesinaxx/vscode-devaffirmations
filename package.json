@@ -16,7 +16,7 @@
 		"type": "git",
 		"url": "https://github.com/jewlexx/vscode-devaffirmations"
 	},
-	"license": "MIT",
+	"license": "WTFPL",
 	"publisher": "jewlexx",
 	"main": "./out/extension.js",
 	"scripts": {
